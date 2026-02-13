@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Conf 2025 Registration</title>
+    <style>
+      :root {
+        --primary-orange: #f87d63;
+        --bg-dark: #0b0521;
+        --text-white: #ffffff;
+        --text-gray: #d1d5db;
+        --input-bg: rgba(255, 255, 255, 0.1);
+        --border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif; /* Use a similar sans-serif font */
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        background-image:
+          radial-gradient(
+            circle at 10% 90%,
+            rgba(248, 125, 99, 0.15),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 10%,
+            rgba(136, 73, 255, 0.2),
+            transparent 40%
+          );
+        background-attachment: fixed;
+        color: var(--text-white);
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 40px 20px;
+        overflow-x: hidden;
+      }
+
+      /* Background lines approximation */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("bg-lines-desktop.svg") no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        opacity: 0.5;
+      }
+
+      .container {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Header */
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      header p {
+        color: var(--text-gray);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+
+      /* Form Styles */
+      form {
+        text-align: left;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 16px;
+        background: var(--input-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        color: white;
+        font-size: 1rem;
+        transition: border 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: var(--primary-orange);
+      }
+
+      /* Upload Box */
+      .upload-box {
+        border: 2px dashed var(--border-color);
+        background: var(--input-bg);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .upload-box:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .icon-bg {
+        background: rgba(255, 255, 255, 0.1);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10px;
+      }
+
+      .info-text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+        font-size: 0.75rem;
+        color: var(--text-gray);
+      }
+
+      /* Button */
+      .submit-btn {
+        width: 100%;
+        padding: 16px;
+        background-color: var(--primary-orange);
+        color: var(--bg-dark);
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 10px;
+        transition:
+          transform 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      .submit-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+      .imageInput {
+        width: 400px;
+        padding: 20px;
+        background-color: #0b052100;
+        border: none;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Responsive Media Queries */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .container {
+          padding: 0 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 20px 15px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      :root {
+        --primary-orange: #f87d63;
+        --text-white: #ffffff;
+        --text-gray: #d1d5db;
+        --glass-bg: rgba(255, 255, 255, 0.07);
+        --glass-border: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Header Adjustments */
+      .success-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 60px;
+      }
+
+      .highlight {
+        background: linear-gradient(to right, #f87d63, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .highlight-email {
+        color: var(--primary-orange);
+      }
+
+      /* The Ticket Container */
+      .ticket {
+        position: relative;
+        display: flex;
+        width: 600px;
+        height: 280px;
+        margin: 0 auto;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 15px;
+        /* Masking creates the circular cutouts on the side */
+        mask-image:
+          radial-gradient(circle at 450px 0%, transparent 20px, black 21px),
+          radial-gradient(circle at 450px 100%, transparent 20px, black 21px);
+        mask-composite: intersect;
+        -webkit-mask-composite: destination-in;
+      }
+
+      /* Dividing Dashed Line */
+      .ticket::after {
+        content: "";
+        position: absolute;
+        left: 450px;
+        top: 20px;
+        bottom: 20px;
+        border-left: 2px dashed var(--glass-border);
+      }
+
+      .ticket-content {
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .ticket-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .ticket-date {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        padding-left: 45px;
+      }
+
+      .ticket-user {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .user-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .user-info h3 {
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+      }
+
+      .github-handle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-gray);
+        font-size: 0.9rem;
+      }
+
+      /* Ticket Number Stub */
+      .ticket-stub {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ticket-number {
+        transform: rotate(90deg);
+        color: var(--text-gray);
+        font-size: 1.5rem;
+        font-family: monospace;
+        letter-spacing: 2px;
+      }
+
+      /* Responsive Media Queries */
+      @media (max-width: 650px) {
+        .ticket {
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+          mask-image: none; /* Simplify for mobile */
+        }
+
+        .ticket::after {
+          left: 20px;
+          right: 20px;
+          top: auto;
+          bottom: 80px;
+          border-left: none;
+          border-top: 2px dashed var(--glass-border);
+        }
+
+        .ticket-stub {
+          width: 100%;
+          height: 80px;
+        }
+
+        .ticket-number {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" />
+        </div>
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year’s biggest coding conference.</p>
+      </header>
+
+      <form id="ticketForm">
+        <div class="form-group">
+          <label>Upload Avatar</label>
+          <div class="upload-box" id="dropzone">
+            <div class="icon-bg">
+              <input
+                type="file"
+                accept="image/*"
+                class="imageInput"
+                placeholder="Drag and drop or click to upload"
+              />
+            </div>
+          </div>
+          <div class="info-text">
+            <img src="assets/images/icon-info.svg" alt="info" />
+            <span style="font-size: 11px; opacity: 0.7"
+              >Upload your photo (JPG or PNG, max size: 500KB).</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Write your name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" />
+        </div>
+
+        <button class="submit-btn">Generate My Ticket</button>
+      </form>
+    </div>
+    <div class="ticket-container"></div>
+    <script>
+      let submit = document.querySelector(".submit-btn");
+      let imageInput = document.querySelector(".imageInput");
+      let fullName = document.getElementById("fullName");
+      let email = document.getElementById("email");
+      let github = document.getElementById("github");
+      let ticketcontainer = document.querySelector(".ticket-container");
+      let container = document.querySelector(".container");
+
+      submit.addEventListener("click", function (e) {
+        e.preventDefault();
+        let ticketcontainer = document.querySelector(".ticket-container");
+        let container = document.querySelector(".container");
+        let box = document.createElement("div");
+        box.innerHTML = ` <header class="success-header">
+        <div class="logo">
+          <img src="assets/images/logo-full.svg" class="logo" />
+        </div>
+        <h1>
+          Congrats, <span class="highlight">${fullName.value}</span> Your ticket
+          is ready.
+        </h1>
+        <p>
+          We've emailed your ticket to
+          <span class="highlight-email">${email.value}</span> and will send
+          updates in the run up to the event.
+        </p>
+      </header>
+
+      <div class="ticket">
+        <div class="ticket-content">
+          <div class="ticket-header">
+            <div class="ticket-logo">
+              <img src="assets/images/logo-full.svg" alt="" />
+            </div>
+            <p class="ticket-date">Jan 31, 2025 / Austin, TX</p>
+          </div>
+
+          <div class="ticket-user">
+            <img src="assets/images/image-avatar.jpg" class="user-avatar" />
+            <div class="user-info">
+              <h3>${fullName.value}</h3>
+              <div class="github-handle">
+                <img src="assets/images/icon-github.svg" alt="GitHub" />
+                <span>${github.value}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket-stub">
+          <span class="ticket-number">#01609</span>
+        </div>
+      </div>`;
+
+        ticketcontainer.appendChild(box);
+        container.style.display = "none";
+        let img = document.querySelector(".user-avatar");
+        if (imageInput.files.length > 0) {
+          let file = imageInput.files[0];
+          let imageURL = URL.createObjectURL(file);
+          img.setAttribute("src", imageURL);
+          console.log(imageURL);
+        }
+      });
+    </script>
+  </body>
+</html>
